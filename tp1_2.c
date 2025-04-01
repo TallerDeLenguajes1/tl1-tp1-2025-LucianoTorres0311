@@ -4,6 +4,7 @@ int devolverCuadrado(int num1);
 void escribirCuadrado(int num2);
 void mostrarDireccion(int *punt);
 void invertir(int *punt, int *punt2);
+void orden(int *punt, int *punt2);
 
 int main()
 {
@@ -27,6 +28,7 @@ int main()
     printf("El valor despues de invertir de num1 es: %d \n",num1);
     printf("El valor despues de invertir de num2 es: %d \n",num2);
     printf("\n");
+    orden(punt,punt2);
     return 0;
 }
 
@@ -58,6 +60,16 @@ void invertir(int *punt, int *punt2)
     aux = *punt;
     *punt = *punt2;
     *punt2 = aux;
-    
-    
+}
+
+void orden (int *punt, int *punt2)
+{
+    int aux;
+    if (*punt > *punt2){
+        
+        aux = *punt;
+        *punt = *punt2;
+        *punt2 = aux;
+    } 
+    printf("El valor mas chico es: %d y el valor mas grande es: %d\n", *punt, *punt2);
 }
